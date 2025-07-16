@@ -12,7 +12,13 @@ def get_multiplication_table(table_size):
     Returns:
         String representation of formatted multiplication table
     """
-    return None
+    result = ""
+    for i in range(1, table_size + 1):
+        add_string = ""
+        for j in range (1, table_size + 1):
+            add_string += f'{str(i*j):>3}'+ " |"  
+        result += add_string +"\n"
+    return result
 
 
 def get_small_multiplication_table():
@@ -21,7 +27,8 @@ def get_small_multiplication_table():
     Returns:
         String representation of 4x4 multiplication table
     """
-    return None
+    result = ""
+    return get_multiplication_table(5)
 
 
 def get_large_multiplication_table():
@@ -30,4 +37,8 @@ def get_large_multiplication_table():
     Returns:
         String representation of 10x10 multiplication table
     """
-    return None
+    result = ""
+    return get_multiplication_table(10)    
+
+print(get_small_multiplication_table())
+print(get_large_multiplication_table())

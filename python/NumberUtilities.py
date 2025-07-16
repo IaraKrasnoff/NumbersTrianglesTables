@@ -15,7 +15,10 @@ def get_exponentiations(start, stop, step, exponent):
     Returns:
         String concatenation of exponential values
     """
-    return None
+    result = ""
+    for i in range(start, stop, step):
+        result = result + str(i**exponent)
+    return result
 
 
 def get_range(start, stop=None, step=1):
@@ -28,11 +31,21 @@ def get_range(start, stop=None, step=1):
     Returns:
         String concatenation of numbers in range
     """
+  
     if stop is None:
         # Single parameter version: get_range(stop)
         stop = start
         start = 0
-    return None
+   
+    print(start, stop, step)
+    result = ""
+    
+    for i in range(start, stop, step):
+        print(i)
+        result = result + str(i)
+        print(result)
+    print(result) 
+    return result
 
 
 def is_number_even(to_test):
@@ -43,7 +56,8 @@ def is_number_even(to_test):
     Returns:
         Boolean indicating if number is even
     """
-    return False
+    if to_test % 2 == 0:
+        return True
 
 
 def is_number_odd(to_test):
@@ -54,6 +68,9 @@ def is_number_odd(to_test):
     Returns:
         Boolean indicating if number is odd
     """
+    if to_test % 2 != 0:
+        
+        return True
     return False
 
 
@@ -66,7 +83,15 @@ def get_even_numbers(start, stop):
     Returns:
         String concatenation of even numbers
     """
-    return None
+    result = ""
+    
+    for i in range(start, stop):
+        if is_number_even(i) == True:
+            result = result + str(i)
+        
+    return result
+
+    
 
 
 def get_odd_numbers(start, stop):
@@ -78,7 +103,14 @@ def get_odd_numbers(start, stop):
     Returns:
         String concatenation of odd numbers
     """
-    return None
+    result = ""
+    
+    for i in range(start, stop):
+        if is_number_odd(i) == True:
+            result = result + str(i)
+        
+    return result
+    
 
 
 def get_square_numbers(start, stop, step):
@@ -91,4 +123,19 @@ def get_square_numbers(start, stop, step):
     Returns:
         String concatenation of squared numbers
     """
-    return None
+    return get_exponentiations(start, stop, step, 2)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+

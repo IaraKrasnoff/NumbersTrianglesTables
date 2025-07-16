@@ -12,7 +12,12 @@ def get_row(number_of_stars):
     Returns:
         String of asterisks
     """
-    return None
+    result = ""
+    i = 1
+    while (i <= number_of_stars):
+        result = result + '*'
+        i = i + 1
+    return result
 
 
 def get_triangle(number_of_rows):
@@ -23,7 +28,12 @@ def get_triangle(number_of_rows):
     Returns:
         String representation of triangle
     """
-    return None
+    result = ""
+    i = 1
+    while ( i < number_of_rows):
+        result = result + get_row(i)+ '\n'
+        i = i + 1
+    return result
 
 
 def get_small_triangle():
@@ -32,7 +42,7 @@ def get_small_triangle():
     Returns:
         String representation of 4-row triangle
     """
-    return None
+    return get_triangle(5)
 
 
 def get_large_triangle():
@@ -41,4 +51,5 @@ def get_large_triangle():
     Returns:
         String representation of 10-row triangle
     """
-    return None
+    return get_triangle(10)
+

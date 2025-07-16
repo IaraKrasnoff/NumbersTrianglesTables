@@ -8,7 +8,6 @@ from NumberUtilities import *
 from TriangleUtilities import *
 from TableUtilities import *
 
-
 class NumberUtilitiesTest(unittest.TestCase):
     """Test cases for NumberUtilities functions"""
     
@@ -272,7 +271,7 @@ class TableUtilitiesTest(unittest.TestCase):
     
     def test_get_large_multiplication_table(self):
         # Given
-        expected = ("  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 10 |\n"
+        expected =("  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 10 |\n"
                    "  2 |  4 |  6 |  8 | 10 | 12 | 14 | 16 | 18 | 20 |\n"
                    "  3 |  6 |  9 | 12 | 15 | 18 | 21 | 24 | 27 | 30 |\n"
                    "  4 |  8 | 12 | 16 | 20 | 24 | 28 | 32 | 36 | 40 |\n"
